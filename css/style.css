@@ -154,12 +154,18 @@ header .header .header__left .header__left__stars {
   gap: 8px;
   color: #27272A;
 }
+@media screen and (max-width: 800px) {
+  header .header {
+    gap: 32px;
+  }
+}
 @media screen and (max-width: 768px) {
   header .header {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     padding-top: 65px;
+    gap: 64px;
   }
   header .header .header__left .header__left__btns, header .header .header__left .header__left__stars {
     justify-content: center;
@@ -180,6 +186,9 @@ header .header .header__left .header__left__stars {
   }
 }
 
+main .markets__section {
+  margin-bottom: 128px;
+}
 main .markets__section .markets {
   box-shadow: 0px 0px 16px rgba(9, 24, 26, 0.04);
   border-radius: 4px;
@@ -323,6 +332,9 @@ main .markets__section .why__btc__markets .wbm__items .wbm__item p {
     margin-top: 64px;
   }
 }
+main .trade__section {
+  margin-bottom: 128px;
+}
 main .trade__section h4 {
   font-weight: 400;
   color: #18181B;
@@ -385,6 +397,7 @@ main .wallet__section h4 {
   font-weight: 400;
   color: #18181B;
   font-size: 16px;
+  margin-left: 500px;
 }
 main .wallet__section .wallet__section__blocs {
   display: flex;
@@ -437,6 +450,14 @@ main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__i
   main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items .wallet__item {
     flex: 1 1 100%;
     text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .markets__section, main .trade__section, main .wallet__section {
+    margin-bottom: 64px;
+  }
+  main .markets__section .why__btc__markets .wbm__items {
+    gap: 32px;
   }
 }
 
