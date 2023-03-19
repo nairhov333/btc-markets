@@ -420,171 +420,214 @@ nav {
        
       }
     }
-    .trade__section {
+    .template__section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
       margin-bottom: 128px;
-      h4 {
-        font-weight: 400;
-        color: $firstBlack;
-        font-size: 16px;
+  
+      &:nth-child(odd) {
+        .template__section__content {
+          order: 2;
+        }
+  
+        .template__section__cover {
+          order: 1;
+        }
+  
+        @media screen and (max-width: $tablet) {
+          .template__section__content {
+            order: 1;
+          }
+  
+          .template__section__cover {
+            order: 2;
+          }
+        }
       }
-      .trade__section__blocs {
-        display: flex;
-        justify-content: space-between;
-        gap: 32px;
-
-        .trade__section__left{
-          flex: 1 1 500px;
+  
+      .template__section__content {
+        flex: 1 1 550px;
+  
+        h4 {
+          font-weight: 400;
+          color: $firstBlack;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+  
+        h2 {
+          font-size: min(40px, max(20px + 2vw));
+          color: $firstBlack;
+          font-weight: 400;
+        }
+  
+        .template__section__content__items {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 64px;
+          gap: 32px;
+  
+          .template__section__content__item {
+            flex: 1 1 calc(100%/3);
+  
+            h6 {
+              font-size: 16px;
+              color: $firstBlack;
+              font-weight: 400;
+              margin: 8px 0px 16px 0px;
+            }
+  
+            p {
+              color: $secondBlack;
+              font-size: 15px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+  
+      .template__section__cover {
+        flex: 1 1 550px;
+  
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+  
+      @media screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+  
+        .template__section__cover {
+          img {
+            max-width: 600px;
+            margin: 0 auto;
+          }
+        }
+      }
+  
+      @media screen and (max-width: $mobileM) {
+        .template__section__content {
+          h2 {
+            text-align: center;
+          }
+  
+          .template__section__content__items {
+            .template__section__content__item {
+              flex: 1 1 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .vip__program__section {
+      background: #fafafa;
+      padding-bottom: 128px;
+      .container {
+        .vip__program__section__content {
+          max-width: 710px;
+          margin: 0 auto;
+          text-align: center;
+          color: $firstBlack;
+          h4 {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+          }
 
           h2 {
-            font-size: min(40px, (20px + 2vw));
-            color: $firstBlack;
             font-weight: 400;
+            font-size: min(40px, max(20px + 2vw));
+            letter-spacing: 0.1px;
+            margin: 16px 0px 32px 0px;
           }
-          .trade__items {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 64px;
-            gap: 32px;
+          p {
+            color: $secondBlack;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            margin-bottom: 48px;
+          }
 
-            .trade__item {
-              flex: 1 1 calc(100%/3);
+          .vip__program__section__items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 64px;
+            margin-bottom: 64px;
+            .vip__program__section__item {
+              display: flex;
+              align-items: center;
+              gap: 8px;
 
               h6 {
                 font-size: 16px;
-                color: $firstBlack;
                 font-weight: 400;
-                margin: 8px 0px 16px 0px;
-              }
-
-              p {
-                color: $secondBlack;
-                font-size: 15px;
-                line-height: 24px;
+                margin: 0;
               }
             }
-          }
-        }
+            @media screen and (max-width: $mobileL) {
+              flex-wrap: wrap;
+            }
 
-        .trade__section__right {
-          flex: 1 1 500px;
+            @media screen and (max-width: $mobileM) {
+              gap: 32px;
+            }
 
-          
-        }
+            @media screen and (max-width: $mobilexs) {
+              .vip__program__section__item {
+                gap: 4px;
 
-        @media screen and (max-width: $tablet) {
-          flex-wrap: wrap;
-
-          .trade__items__right {
-            .trade__section__right__img {
-              img {
-                width: 100%;
+                h6 {
+                  font-size: 15px;
+                }
               }
             }
-          }
-        }
+         }
 
-        @media screen and (max-width: $mobileM) {
-          .trade__section__left {
-            h2 {
-             text-align: center;
-            }
-
-            .trade__items {
-              .trade__item {
-                flex: 1 1 100%;
-                text-align: center;
-              }
-            }
-          }
-        }
-      }
-    }
-    .wallet__section {
-      h4 {
-        font-weight: 400;
-        color: $firstBlack;
-        font-size: 16px;
-        margin-left: 500px;
-      }
-      .wallet__section__blocs {
-        display: flex;
-        justify-content: space-between;
-        gap: 32px;
-
-        .wallet__section__left {
-          flex: 1 1 500px;
-        }
-        .wallet__section__right {
-          flex: 1 1 500px;
-          h2 {
-            font-size: min(40px, (20px + 2vw));
+          a {
+            display: block;
+            text-decoration: none;
+            padding: 9px 36px;
             color: $firstBlack;
-            font-weight: 400;
-          }
-          .wallet__items {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 64px;
-            gap: 32px;
-
-            .wallet__item {
-              flex: 1 1 calc(100%/3);
-              
-              h {
-                font-size: 16px;
-                color: $firstBlack;
-                font-weight: 400;
-                margin: 8px 0px 16px 0px;
-              }
-
-              p {
-                color: $secondBlack;
-                font-size: 15px;
-                line-height: 24px;
-              }
-            }
+            border: 1px solid $firstBlack;
+            border-radius: $br;
+            width: fit-content;
+            margin: 0px auto 64px auto;
           }
         }
-        @media screen and (max-width: $tablet) {
-          flex-wrap: wrap;
-
-          .wallet__items__left {
-            .trade__section__right__img {
-              img {
-                width: 100%;
-              }
-            }
-          }
-        }
-        @media screen and (max-width: $mobileM) {
-          .wallet__section__right {
-            h2 {
-             text-align: center;
-            }
-
-            .wallet__items {
-              .wallet__item {
-                flex: 1 1 100%;
-                text-align: center;
-              }
-            }
+        
+        .vip__program__section__cover {
+          img {
+            display: block;
+            width: 100%;
           }
         }
       }
     }
+    
     @media screen and (max-width: $mobileL) {
-      .markets__section, .trade__section, .wallet__section {
+      .markets__section,
+      .template__section {
         margin-bottom: 64px;
       }
-      .markets__section {
-        .why__btc__markets {
-          .wbm__items {
-            gap: 32px;
+  
+      .template__section {
+        .template__section__content {
+          h4 {
+            text-align: center;
           }
         }
       }
-    }
   }
+}
+      
+
+    
+
+  
 
 
 // Normalize CSS

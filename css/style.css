@@ -332,132 +332,171 @@ main .markets__section .why__btc__markets .wbm__items .wbm__item p {
     margin-top: 64px;
   }
 }
-main .trade__section {
+main .template__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
   margin-bottom: 128px;
 }
-main .trade__section h4 {
+main .template__section:nth-child(odd) .template__section__content {
+  order: 2;
+}
+main .template__section:nth-child(odd) .template__section__cover {
+  order: 1;
+}
+@media screen and (max-width: 1024px) {
+  main .template__section:nth-child(odd) .template__section__content {
+    order: 1;
+  }
+  main .template__section:nth-child(odd) .template__section__cover {
+    order: 2;
+  }
+}
+main .template__section .template__section__content {
+  flex: 1 1 550px;
+}
+main .template__section .template__section__content h4 {
   font-weight: 400;
   color: #18181B;
   font-size: 16px;
+  text-transform: uppercase;
 }
-main .trade__section .trade__section__blocs {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-}
-main .trade__section .trade__section__blocs .trade__section__left {
-  flex: 1 1 500px;
-}
-main .trade__section .trade__section__blocs .trade__section__left h2 {
-  font-size: min(40px, 20px + 2vw);
+main .template__section .template__section__content h2 {
+  font-size: min(40px, max(20px + 2vw));
   color: #18181B;
   font-weight: 400;
 }
-main .trade__section .trade__section__blocs .trade__section__left .trade__items {
+main .template__section .template__section__content .template__section__content__items {
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
   gap: 32px;
 }
-main .trade__section .trade__section__blocs .trade__section__left .trade__items .trade__item {
+main .template__section .template__section__content .template__section__content__items .template__section__content__item {
   flex: 1 1 33.3333333333%;
 }
-main .trade__section .trade__section__blocs .trade__section__left .trade__items .trade__item h6 {
+main .template__section .template__section__content .template__section__content__items .template__section__content__item h6 {
   font-size: 16px;
   color: #18181B;
   font-weight: 400;
   margin: 8px 0px 16px 0px;
 }
-main .trade__section .trade__section__blocs .trade__section__left .trade__items .trade__item p {
+main .template__section .template__section__content .template__section__content__items .template__section__content__item p {
   color: #27272A;
   font-size: 15px;
   line-height: 24px;
 }
-main .trade__section .trade__section__blocs .trade__section__right {
-  flex: 1 1 500px;
+main .template__section .template__section__cover {
+  flex: 1 1 550px;
+}
+main .template__section .template__section__cover img {
+  display: block;
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
-  main .trade__section .trade__section__blocs {
+  main .template__section {
     flex-wrap: wrap;
   }
-  main .trade__section .trade__section__blocs .trade__items__right .trade__section__right__img img {
-    width: 100%;
+  main .template__section .template__section__cover img {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 580px) {
-  main .trade__section .trade__section__blocs .trade__section__left h2 {
+  main .template__section .template__section__content h2 {
     text-align: center;
   }
-  main .trade__section .trade__section__blocs .trade__section__left .trade__items .trade__item {
+  main .template__section .template__section__content .template__section__content__items .template__section__content__item {
     flex: 1 1 100%;
     text-align: center;
   }
 }
-main .wallet__section h4 {
-  font-weight: 400;
+main .vip__program__section {
+  background: #fafafa;
+  padding-bottom: 128px;
+}
+main .vip__program__section .container .vip__program__section__content {
+  max-width: 710px;
+  margin: 0 auto;
+  text-align: center;
   color: #18181B;
+}
+main .vip__program__section .container .vip__program__section__content h4 {
   font-size: 16px;
-  margin-left: 500px;
-}
-main .wallet__section .wallet__section__blocs {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-}
-main .wallet__section .wallet__section__blocs .wallet__section__left {
-  flex: 1 1 500px;
-}
-main .wallet__section .wallet__section__blocs .wallet__section__right {
-  flex: 1 1 500px;
-}
-main .wallet__section .wallet__section__blocs .wallet__section__right h2 {
-  font-size: min(40px, 20px + 2vw);
-  color: #18181B;
   font-weight: 400;
+  margin: 0;
 }
-main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 64px;
-  gap: 32px;
-}
-main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items .wallet__item {
-  flex: 1 1 33.3333333333%;
-}
-main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items .wallet__item h {
-  font-size: 16px;
-  color: #18181B;
+main .vip__program__section .container .vip__program__section__content h2 {
   font-weight: 400;
-  margin: 8px 0px 16px 0px;
+  font-size: min(40px, max(20px + 2vw));
+  letter-spacing: 0.1px;
+  margin: 16px 0px 32px 0px;
 }
-main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items .wallet__item p {
+main .vip__program__section .container .vip__program__section__content p {
   color: #27272A;
-  font-size: 15px;
   line-height: 24px;
+  letter-spacing: 0.2px;
+  margin-bottom: 48px;
 }
-@media screen and (max-width: 1024px) {
-  main .wallet__section .wallet__section__blocs {
-    flex-wrap: wrap;
-  }
-  main .wallet__section .wallet__section__blocs .wallet__items__left .trade__section__right__img img {
-    width: 100%;
-  }
+main .vip__program__section .container .vip__program__section__content .vip__program__section__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 64px;
 }
-@media screen and (max-width: 580px) {
-  main .wallet__section .wallet__section__blocs .wallet__section__right h2 {
-    text-align: center;
-  }
-  main .wallet__section .wallet__section__blocs .wallet__section__right .wallet__items .wallet__item {
-    flex: 1 1 100%;
-    text-align: center;
-  }
+main .vip__program__section .container .vip__program__section__content .vip__program__section__items .vip__program__section__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .vip__program__section .container .vip__program__section__content .vip__program__section__items .vip__program__section__item h6 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
 }
 @media screen and (max-width: 768px) {
-  main .markets__section, main .trade__section, main .wallet__section {
+  main .vip__program__section .container .vip__program__section__content .vip__program__section__items {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 580px) {
+  main .vip__program__section .container .vip__program__section__content .vip__program__section__items {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 380px) {
+  main .vip__program__section .container .vip__program__section__content .vip__program__section__items .vip__program__section__item {
+    gap: 4px;
+  }
+  main .vip__program__section .container .vip__program__section__content .vip__program__section__items .vip__program__section__item h6 {
+    font-size: 15px;
+  }
+}
+main .vip__program__section .container .vip__program__section__content a {
+  display: block;
+  text-decoration: none;
+  padding: 9px 36px;
+  color: #18181B;
+  border: 1px solid #18181B;
+  border-radius: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto 64px auto;
+}
+main .vip__program__section .container .vip__program__section__cover img {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main .markets__section,
+main .template__section {
     margin-bottom: 64px;
   }
-  main .markets__section .why__btc__markets .wbm__items {
-    gap: 32px;
+  main .template__section .template__section__content h4 {
+    text-align: center;
   }
 }
 
