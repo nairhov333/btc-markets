@@ -168,9 +168,13 @@ nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 130px;
+      padding-top: 128px;
       gap: 64px;
 
+      @media screen and (max-width: $tablet) {
+        padding-top: 64px;
+      }
+      
       .header__left {
         max-width: 659px;
 
@@ -218,6 +222,7 @@ nav {
           align-items: center;
           gap: 8px;
           color: $secondBlack;
+          user-select: none;
         }
       }
 
@@ -385,7 +390,7 @@ nav {
         margin-top: 64px;
         h2 {
           text-align: center;
-          font-size: min(48px, max(25px + 2vw));
+          font-size: min(40px, max(20px + 2vw));
           font-weight: 400;
           margin: 0;
         }
@@ -526,6 +531,11 @@ nav {
     .vip__program__section {
       background: #fafafa;
       padding-bottom: 128px;
+
+      @media screen and (max-width: $mobileL)
+      {
+        padding-top: 64px;
+      }
       .container {
         .vip__program__section__content {
           max-width: 710px;
@@ -607,14 +617,284 @@ nav {
         }
       }
     }
+
+    .tree__easy__steps__section {
+      padding-bottom: 128px;
+      padding-bottom: 128px;
+
+      @media Screen and (max-width: $mobileL) {
+        padding-bottom: 64px;
+      padding-bottom: 64px;
+      }
+      .tree__easy__steps {
+        max-width: 900px;
+        margin: 0 auto;
+
+        h2 {
+          font-weight: 400;
+            font-size: min(40px, max(20px + 2vw));
+            letter-spacing: 0.1px;
+            margin: 16px 0px 64px 0px;
+            text-align: center;
+            text-align: center;
+        }
+        .tree__easy__steps__items {
+          display: flex;
+          justify-content: center;
+          gap: 64px;
+          margin-bottom: 64px;
+          .tree__easy__steps__item {
+            text-align: center;
+            width: 278px;
+
+            .icon {
+              padding: 16px;
+              background: #FCFBF8;
+              width: 72px;
+              height: 72px;
+              border-radius: $br;
+              margin: 0 auto;
+            }
+            h6 {
+              font-size: 20px;
+              color: $firstBlack;
+              font-weight: 400;
+              margin: 16px 0px;
+            }
+            p {
+              color: $secondBlack;
+              line-height: 24px;
+              letter-spacing: 0.2px;
+              font-size: 15px;
+            }
+          }
+          @media screen and (max-width: $mobileL){
+            flex-wrap: wrap;
+          }
+          @media screen and (max-width: $mobileM){
+            gap: 32px;
+          }
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 9px 33px;
+          background: $primary;
+          color: $greenBlack;
+          width: fit-content;
+          border-radius: $br;
+          margin: 0px auto 32px auto;
+        }
+        .tree__easy__steps__stars {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          color: $secondBlack;
+          user-select: none;
+        }
+      }
+    }
+
+    .trade__on__the__go {
+
+      h2 {
+        font-weight: 400;
+          font-size: min(40px, max(20px + 2vw));
+          letter-spacing: 0.1px;
+          margin: 0px 0px 32px 0px;
+          text-align: center;
+          text-align: center;
+      }
+      
+      p {
+        color: $secondBlack;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        font-size: 15px;
+        text-align: center;
+        max-width: 900px;
+        margin: o auto 32px auto;
+      }
+
+      .totg__store {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+
+        @media screen and (max-width: $mobileM) {
+          flex-wrap: wrap;
+        }
+
+        .app-store, .google-play {
+          img {
+            display: block;
+            width: 150px;
+            height: 40px;
+          }
+        }
+
+        .app__store__stars, .google__play__stars {
+          display: flex;
+          gap: 8px;
+          margin-top: 16px;
+
+          img {
+            width: unset;
+            height: unset;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 9px 36px;
+        color: $firstBlack;
+        border: 1px solid $firstBlack;
+        border-radius: $br;
+        width: fit-content;
+        margin: 32px auto 0px auto;
+      }
+    }
+
+    .latest__news__section {
+      padding-bottom: 128px;
+      padding-bottom: 128px;
+
+      h2 {
+        font-weight: 400;
+          font-size: min(40px, max(20px + 2vw));
+          letter-spacing: 0.1px;
+          margin: 0px 0px 32px 0px;
+          text-align: center;
+          text-align: center;
+      }
+
+      .latest__news__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        margin-bottom: 64px;
+
+        .latest__news__item {
+          box-shadow: 0px 0px 16px rgba(9, 24, 26, 0.04);
+          border-radius: 8px;
+
+          .latest__news__item__cover {
+            max-width: 357px;
+            max-height: 148px;
+            overflow: hidden;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .latest__news__item__date__status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px 0px;
+            padding: 0px 16px;
+
+            @media screen and (max-width: $mobilexs) {
+              flex-wrap: wrap;
+
+              p {
+                width: 100%;
+                text-align: center;
+                
+                &:first-child {
+                  margin-bottom: 8px;
+                }
+              }
+            }
+
+            p {
+              margin: 0;
+              color: $firstBlack;
+
+              &:first-child {
+                background: #BDFFEB;
+                padding: 6px;
+                border-radius: $br;
+                color: $greenBlack;
+                font-size: 15px;
+              }
+            }
+          }
+
+          h4 {
+            font-size: min(24px, (12px + 2vw));
+            margin: 0;
+            font-weight: 400;
+            max-width: 350px;
+            padding: 0px 16 px;
+
+            a {
+              color: $firstBlack;
+              text-decoration: none;
+            }
+
+          }
+
+          .read__more {
+            display: block;
+            margin-top: 16px;
+            text-decoration: none;
+            color: $footerBlack;
+            padding: 0px 16px 16px 16px;
+          }
+
+        }
+
+        @media screen and (max-width: $tablet) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      .check__out__link {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: $footerBlack;
+        margin-bottom: 64px;
+      }
+
+      .social {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        align-items: center;
+
+        @media screen and (max-width: $mobileL) {
+          flex-wrap: wrap;
+        }
+        
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          font-size: 16px;
+          color: $footerBlack;
+        }
+      }
+    }
     
     @media screen and (max-width: $mobileL) {
-      .markets__section,
-      .template__section {
+      .markets__section {
         margin-bottom: 64px;
       }
   
       .template__section {
+        margin-bottom: 64px;
         .template__section__content {
           h4 {
             text-align: center;
