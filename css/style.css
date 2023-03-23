@@ -5,6 +5,18 @@
 body {
   font-family: "regular", sans-serif;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 .container {
   max-width: 1200px;
@@ -41,8 +53,26 @@ nav .nav .nav__items .nav__menu li {
   list-style-type: none;
 }
 nav .nav .nav__items .nav__menu li a {
+  position: relative;
   color: #18181B;
   text-decoration: none;
+  transition: 0.3s;
+}
+nav .nav .nav__items .nav__menu li a::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #4CFDC7;
+  position: absolute;
+  bottom: -10px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+nav .nav .nav__items .nav__menu li a:hover {
+  color: #4CFDC7;
+}
+nav .nav .nav__items .nav__menu li a:hover:before {
+  width: 100%;
 }
 nav .nav .nav__items .nav__btns {
   display: flex;
@@ -54,15 +84,26 @@ nav .nav .nav__items .nav__btns button {
   cursor: pointer;
   color: #18181B;
   font-size: 12px;
+  transition: 0.3s;
 }
 nav .nav .nav__items .nav__btns button#login {
   border: 1px solid #18181B;
   background: transparent;
 }
+nav .nav .nav__items .nav__btns button#login:hover {
+  background: #01271C;
+  border-color: #01271C;
+  color: #fff;
+}
 nav .nav .nav__items .nav__btns button#signup {
   border: 1px solid #4CFDC7;
   background: #4CFDC7;
   color: #01271C;
+}
+nav .nav .nav__items .nav__btns button#signup:hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: #fff;
 }
 @media screen and (max-width: 890px) {
   nav .nav .logo svg {
@@ -143,15 +184,26 @@ header .header .header__left .header__left__btns a {
   padding: 9px 33px;
   border-radius: 4px;
   text-decoration: none;
+  transition: 0.3s;
 }
 header .header .header__left .header__left__btns a:nth-child(1) {
   background: #4CFDC7;
   color: #01271C;
 }
+header .header .header__left .header__left__btns a:nth-child(1):hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: #fff;
+}
 header .header .header__left .header__left__btns a:nth-child(2) {
   background: transparent;
   color: #18181B;
   border: 1px solid #18181B;
+}
+header .header .header__left .header__left__btns a:nth-child(2):hover {
+  background: #01271C;
+  border-color: #01271C;
+  color: #fff;
 }
 header .header .header__left .header__left__stars {
   display: flex;
@@ -222,6 +274,18 @@ main .markets__section .markets .markets__table {
   overflow-y: hidden;
   overflow-x: auto;
 }
+main .markets__section .markets .markets__table::-webkit-scrollbar {
+  height: 8px;
+}
+main .markets__section .markets .markets__table::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+main .markets__section .markets .markets__table::-webkit-scrollbar-thumb {
+  background: #888;
+}
+main .markets__section .markets .markets__table::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 main .markets__section .markets .markets__table table {
   border-collapse: collapse;
   width: 100%;
@@ -258,6 +322,7 @@ main .markets__section .markets .markets__table table tbody tr td:nth-child(1), 
 }
 main .markets__section .markets .markets__table table tbody tr td a {
   display: block;
+  width: 54px;
   text-decoration: none;
   padding: 16px 0px;
   background: #4CFDC7;
@@ -266,6 +331,13 @@ main .markets__section .markets .markets__table table tbody tr td a {
   cursor: pointer;
   text-align: center;
   font-size: 12px;
+  margin: 0px 0px 0px auto;
+  transition: 0.3s;
+}
+main .markets__section .markets .markets__table table tbody tr td a:hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   main .markets__section .markets .markets__table table {
@@ -499,6 +571,12 @@ main .vip__program__section .container .vip__program__section__content a {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0px auto 64px auto;
+  transition: 0.3s;
+}
+main .vip__program__section .container .vip__program__section__content a:hover {
+  background: #01271C;
+  border-color: #01271C;
+  color: #fff;
 }
 main .vip__program__section .container .vip__program__section__cover img {
   display: block;
@@ -576,7 +654,13 @@ main .tree__easy__steps__section .tree__easy__steps a {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 4px;
-  margin: 0px auto 32px auto;
+  margin: 0 auto 32px auto;
+  transition: 0.3s;
+}
+main .tree__easy__steps__section .tree__easy__steps a:hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: #fff;
 }
 main .tree__easy__steps__section .tree__easy__steps .tree__easy__steps__stars {
   display: flex;
@@ -633,7 +717,7 @@ main .trade__on__the__go .totg__store .app__store__stars img, main .trade__on__t
 main .trade__on__the__go a {
   display: block;
   text-decoration: none;
-  padding: 9px 36px;
+  padding: 9px 33px;
   color: #18181B;
   border: 1px solid #18181B;
   border-radius: 4px;
@@ -641,17 +725,28 @@ main .trade__on__the__go a {
   width: -moz-fit-content;
   width: fit-content;
   margin: 32px auto 0px auto;
+  transition: 0.3s;
+}
+main .trade__on__the__go a:hover {
+  background: #01271C;
+  border-color: #01271C;
+  color: #fff;
 }
 main .latest__news__section {
   padding-bottom: 128px;
   padding-bottom: 128px;
+}
+@media screen and (max-width: 768px) {
+  main .latest__news__section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 main .latest__news__section h2 {
   font-weight: 400;
   font-size: min(40px, max(20px + 2vw));
   letter-spacing: 0.1px;
   margin: 0px 0px 32px 0px;
-  text-align: center;
   text-align: center;
 }
 main .latest__news__section .latest__news__items {
@@ -661,8 +756,9 @@ main .latest__news__section .latest__news__items {
   margin-bottom: 64px;
 }
 main .latest__news__section .latest__news__items .latest__news__item {
-  box-shadow: 0px 0px 16px rgba(9, 24, 26, 0.04);
+  box-shadow: 0px 0px 32px rgba(9, 24, 26, 0.1);
   border-radius: 8px;
+  transition: all 0.3s;
 }
 main .latest__news__section .latest__news__items .latest__news__item .latest__news__item__cover {
   max-width: 357px;
@@ -675,6 +771,7 @@ main .latest__news__section .latest__news__items .latest__news__item .latest__ne
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s;
 }
 main .latest__news__section .latest__news__items .latest__news__item .latest__news__item__date__status {
   display: flex;
@@ -721,8 +818,21 @@ main .latest__news__section .latest__news__items .latest__news__item .read__more
   display: block;
   margin-top: 16px;
   text-decoration: none;
-  color: #3F3F46;
+  color: #18181B;
   padding: 0px 16px 16px 16px;
+  transition: 0.3s;
+}
+main .latest__news__section .latest__news__items .latest__news__item:hover {
+  box-shadow: 0px 0px 32px rgba(9, 24, 26, 0.3);
+}
+main .latest__news__section .latest__news__items .latest__news__item:hover .latest__news__item__cover img {
+  transform: scale(1.1);
+}
+main .latest__news__section .latest__news__items .latest__news__item:hover h4 a {
+  color: #01271C;
+}
+main .latest__news__section .latest__news__items .latest__news__item:hover .read__more {
+  color: #10B981;
 }
 @media screen and (max-width: 1024px) {
   main .latest__news__section .latest__news__items {
@@ -736,6 +846,9 @@ main .latest__news__section .check__out__link {
   text-align: center;
   color: #3F3F46;
   margin-bottom: 64px;
+}
+main .latest__news__section .check__out__link:hover {
+  text-decoration: underline;
 }
 main .latest__news__section .social {
   display: flex;
@@ -754,7 +867,42 @@ main .latest__news__section .social a {
   gap: 10px;
   text-decoration: none;
   font-size: 16px;
-  color: #3F3F46;
+  color: #18181B;
+  transition: 0.3s;
+}
+main .latest__news__section .social a svg path {
+  transition: 0.3s;
+}
+main .latest__news__section .social a:hover {
+  color: #10B981;
+}
+main .latest__news__section .social a:hover svg path {
+  fill: #10B981;
+}
+main .before__footer h2 {
+  text-align: center;
+  font-size: min(40px, max(20px + 2vw));
+  font-weight: 400;
+  margin: 0px auto 32px auto;
+  max-width: 420px;
+}
+main .before__footer a {
+  display: block;
+  text-decoration: none;
+  padding: 9px 33px;
+  background: #4CFDC7;
+  color: #01271C;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  margin: 0 auto 32px auto;
+  transition: 0.3s;
+}
+main .before__footer a:hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   main .markets__section {
@@ -766,6 +914,98 @@ main .latest__news__section .social a {
   main .template__section .template__section__content h4 {
     text-align: center;
   }
+}
+
+footer {
+  margin-top: 120px;
+}
+footer .footer {
+  display: flex;
+  gap: 64px;
+}
+footer .footer .footer__item {
+  flex: 1 1 227px;
+}
+footer .footer .footer__item h4 {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: #18181B;
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .footer .footer__item ul li {
+  list-style-type: none;
+}
+footer .footer .footer__item ul li a {
+  display: block;
+  text-decoration: none;
+  color: #18181B;
+  margin-bottom: 16px;
+}
+footer .footer .footer__item ul li a svg path {
+  fill: #18181B;
+}
+footer .footer .footer__item ul li a:hover {
+  text-decoration: underline;
+}
+footer .footer .footer__item ul li img {
+  width: 120px;
+  height: 40px;
+  display: block;
+  margin-bottom: 8px;
+}
+footer .footer .footer__item:nth-child(4) li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 1024px) {
+  footer .footer {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .footer {
+    text-align: center;
+  }
+  footer .footer .footer__item {
+    flex: 1 1 100%;
+  }
+  footer .footer .footer__item li img {
+    margin: 0px auto 8px auto;
+  }
+  footer .footer .footer__item:nth-child(4) li a {
+    justify-content: center;
+  }
+}
+footer .footer__info {
+  text-align: center;
+  font-size: 14px;
+  color: #27272A;
+  margin-top: 128px;
+  margin-bottom: 64px;
+}
+footer .footer__info p {
+  margin: 0;
+}
+footer .footer__info .footer__info__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  footer .footer__info .footer__info__top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .footer__info .footer__info__top p {
+    width: 100%;
+  }
+}
+footer .footer__info .footer__info__bottom {
+  font-size: 12px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
